@@ -52,7 +52,7 @@ const Register = ({ onLogin, onSwitch }) => {
                     onChange={e => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit">Register</button>
+                <button type="submit" style={{ width: '100%' }}>Register</button>
             </form>
             {error && <p className="error">{error}</p>}
             <button className="link-btn" onClick={onSwitch}>

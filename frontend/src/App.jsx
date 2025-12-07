@@ -57,7 +57,6 @@ function App() {
             )}
             {view === 'player' && (
                 <Player
-                    token={token}
                     storyId={storyId}
                     audioContext={audioCtx}
                     isStreaming={isStreaming}

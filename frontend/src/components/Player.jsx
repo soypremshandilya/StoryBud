@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-const Player = ({ token, storyId, audioContext, isStreaming, onBack }) => {
+const Player = ({ storyId, audioContext, isStreaming, onBack }) => {
     const [text, setText] = useState('Waiting for audio...')
     const [status, setStatus] = useState('Connecting...')
     const [isWaiting, setIsWaiting] = useState(true)
@@ -50,7 +50,7 @@ const Player = ({ token, storyId, audioContext, isStreaming, onBack }) => {
                     isFinishedRef.current = true
                 }
             } else if (event.data instanceof ArrayBuffer) {
-                setStatus('Playing...')
+                setStatus('')
                 playAudioChunk(event.data)
             }
         }
@@ -85,7 +85,7 @@ const Player = ({ token, storyId, audioContext, isStreaming, onBack }) => {
                 setStatus('Buffering...')
             } else {
                 setIsWaiting(false)
-                setStatus('Playing...')
+                setStatus('')
             }
         }, 100)
 

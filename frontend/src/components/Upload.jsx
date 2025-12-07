@@ -51,7 +51,7 @@ const Upload = ({ token, onUpload, onLogout }) => {
 
     return (
         <div className="card">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h2>Upload Story</h2>
                 <button onClick={onLogout} style={{ fontSize: '0.8rem', padding: '0.4rem' }}>Logout</button>
             </div>

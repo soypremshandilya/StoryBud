@@ -43,7 +43,7 @@ const Login = ({ onLogin, onSwitch }) => {
                     onChange={e => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit">Login</button>
+                <button type="submit" style={{ width: '100%' }}>Login</button>
             </form>
             {error && <p className="error">{error}</p>}
             <button className="link-btn" onClick={onSwitch}>
